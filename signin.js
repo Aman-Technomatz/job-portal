@@ -22,6 +22,6 @@ user_record.push({
 	localStorage.setItem("user",JSON.stringify(user_record));
 	
 	}
-	
-
  }
+
+ 
