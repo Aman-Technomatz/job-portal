@@ -22,6 +22,7 @@ function savedata() {
       email: email,
       pass: pass,
     });
+    event.preventDefault();
     localStorage.setItem("user", JSON.stringify(user_record));
     window.location.href = "signin.html";
   }
@@ -45,11 +46,13 @@ function loginData() {
     })
   ) {
     alert("Login Pass");
+    
     let current_user = user_records.filter((v) => {
       return v.email == email && v.pass == pass;
     })[0];
     localStorage.setItem("name", current_user.name);
     localStorage.setItem("email", current_user.email);
+    event.preventDefault();
     window.location.href = "home.html";
   } else {
     alert("Login Fail");
